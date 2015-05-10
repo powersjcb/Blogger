@@ -1,2 +1,9 @@
 <h1>Create a New Article</h1>
+
+<ul>
+  <% @article.errors.full_messages.each do |error| %>
+    <li> <%= error %> </li>
+  <% end %>
+</ul>
+
 <%= render partial: 'form' %>
