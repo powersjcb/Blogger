@@ -41,6 +41,8 @@ class Article < ActiveRecord::Base
     self.tags = tags_array.map do |tag_name|
       Tag.find_or_create_by(name: tag_name)
     end
+
+    self
   end
 
 end
